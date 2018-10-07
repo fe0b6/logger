@@ -61,7 +61,7 @@ func WriteLog(name string, data ...interface{}) (err error) {
 	}
 
 	for _, v := range data {
-		_, err = wr.WriteString(fmt.Sprintf("%x ", v))
+		_, err = wr.WriteString(fmt.Sprintf("%v ", v))
 		if err != nil {
 			log.Println("[error]", err)
 			return
